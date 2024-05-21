@@ -10,11 +10,12 @@ class HomeController extends GetxController {
   }
 
   NewsApi? newsApi;
-  void getNews()async{
+  void getNews() async{
     newsApi= await NewsServices().getNewsdata();
+    update();
   }
 
-  
+
   void onReady() {
     super.onReady();
 
